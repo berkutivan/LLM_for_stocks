@@ -1,0 +1,119 @@
+{
+  "generated_at": "2026-06-24T19:48:56",
+  "new_predictions": {
+    "news_csv": "c:\\Users\\berku\\Desktop\\Newtostocks\\Results\\hybrid_comparison\\market_to_ticker_hybrid_new.csv",
+    "prices_csv": "C:\\Users\\berku\\Desktop\\Newtostocks\\new_prices.csv",
+    "importance_metric": "importance_max",
+    "observations": 339,
+    "date_range": {
+      "from": "2020-01-08",
+      "to": "2026-06-12"
+    },
+    "lag1_abs_return": {
+      "urea": {
+        "pearson_r": 0.0469,
+        "n": 339
+      },
+      "dap": {
+        "pearson_r": -0.0617,
+        "n": 339
+      },
+      "mop": {
+        "pearson_r": -0.0023,
+        "n": 339
+      },
+      "max(urea, dap, mop)": {
+        "pearson_r": 0.027,
+        "n": 339
+      }
+    },
+    "lag1_3_sum_abs_return": {
+      "urea": {
+        "pearson_r": 0.0058,
+        "n": 339
+      },
+      "dap": {
+        "pearson_r": -0.0268,
+        "n": 339
+      },
+      "mop": {
+        "pearson_r": -0.0718,
+        "n": 339
+      },
+      "max(urea, dap, mop)": {
+        "pearson_r": -0.0721,
+        "n": 339
+      }
+    },
+    "spearman_lag1": {
+      "urea": 0.1099,
+      "dap": -0.0801,
+      "mop": -0.039,
+      "max(urea, dap, mop)": 0.0433
+    },
+    "spearman_lag1_3": {
+      "urea": 0.0707,
+      "dap": -0.0079,
+      "mop": -0.0285,
+      "max(urea, dap, mop)": -0.0413
+    }
+  },
+  "baseline_predictions": {
+    "news_csv": "C:\\Users\\berku\\Desktop\\Newtostocks\\Results\\market_to_ticker_hybrid.csv",
+    "prices_csv": "C:\\Users\\berku\\Desktop\\Newtostocks\\new_prices.csv",
+    "importance_metric": "importance_max",
+    "observations": 305,
+    "date_range": {
+      "from": "2020-01-08",
+      "to": "2026-06-12"
+    },
+    "lag1_abs_return": {
+      "urea": {
+        "pearson_r": 0.0636,
+        "n": 305
+      },
+      "dap": {
+        "pearson_r": -0.0171,
+        "n": 305
+      },
+      "mop": {
+        "pearson_r": 0.0294,
+        "n": 305
+      },
+      "max(urea, dap, mop)": {
+        "pearson_r": 0.0722,
+        "n": 305
+      }
+    },
+    "lag1_3_sum_abs_return": {
+      "urea": {
+        "pearson_r": 0.0747,
+        "n": 305
+      },
+      "dap": {
+        "pearson_r": 0.0203,
+        "n": 305
+      },
+      "mop": {
+        "pearson_r": -0.0185,
+        "n": 305
+      },
+      "max(urea, dap, mop)": {
+        "pearson_r": 0.0032,
+        "n": 305
+      }
+    },
+    "spearman_lag1": {
+      "urea": 0.0832,
+      "dap": -0.018,
+      "mop": -0.0151,
+      "max(urea, dap, mop)": 0.0794
+    },
+    "spearman_lag1_3": {
+      "urea": 0.0488,
+      "dap": 0.0338,
+      "mop": -0.0099,
+      "max(urea, dap, mop)": -0.0313
+    }
+  }
+}

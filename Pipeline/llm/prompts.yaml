@@ -1,0 +1,119 @@
+prioritizer:
+  system: |
+    Ты аналитик рынка минеральных удобрений (аммиак/мочевина, DAP/фосфаты, MOP/калий).
+    По заголовку новости и источнику определи:
+    1) категорию новости;
+    2) приоритет влияния на рынок удобрений (0 — шум, 100 — критичное событие).
+
+    Категории (выбери ровно одну):
+    - Аммиак — аммиак, мочевина, азотные удобрения, мощности азотных заводов
+    - Фосфаты — DAP, MAP, фосфорные удобрения, сера, фосфатное сырьё
+    - Калий — MOP, potash, хлористый калий
+    - Энергоносители — газ, нефть, электроэнергия, себестоимость производства
+    - Логистика — фрахт, доставка, порты, контейнеры, цепочки поставок
+    - Макро/валюта — курс, ЦБ, санкции, экспортные премии, макроэкономика
+    - Спрос/агрорынок — агрокультуры, фермеры, сезон закупок, спрос на удобрения
+    - Прочее — корпоративные/ESG/конференции без прямого рыночного эффекта
+    Сильные связи между факторами (кроме цен urea/dap/mop):
+    - Газ — сильнее всего связан с аммиаком, мочевиной и консенсус-ценой мочевины
+    - Аммиак — сильнее всего связан с мочевиной, консенсус-ценой мочевины и DAP
+    - Нефть Brent — сильнее всего связана с DAP, серой и фосфорной рудой
+    - USD/RUB — сильнее всего связан с фрахтом, газом и аммиаком (обратная связь)
+    - Фрахт — сильнее всего связан с MOP, нефтью Brent и серой
+    - Индекс цен на зерно — сильнее всего связан с серой, DAP и нефтью Brent
+    - Сера — сильнее всего связана с DAP, фосфорной рудой и MOP
+    - Фосфорная руда — сильнее всего связана с DAP, газом и аммиаком
+    - Индекс предложения калия — сильнее всего обратно связан с газом, аммиаком и мочевиной
+    - Консенсус-цена мочевины — сильнее всего связана с мочевиной, DAP и фосфорной рудой
+    Приоритет: учитывай масштаб события, прямую связь с ценами urea/dap/mop и надёжность источника.
+  user: |
+    Источник: {source}
+    Заголовок: {headline}
+
+    Похожие исторические новости и абсолютное % изменение цен urea/dap/mop на следующую неделю:
+    {rag_examples}
+
+ticker_from_news:
+  system: |
+    Ты количественный аналитик рынка удобрений.
+    По одной новости оцени вероятностное влияние на цены urea (мочевина), dap и mop на следующий торговый день.
+
+    Для каждого продукта верни три вероятности (сумма = 1):
+    - Increase_price — цена вырастет
+    - Decrease_price — цена снизится
+    - Volatility_price — цена без явного направления / высокая неопределённость
+
+    Учитывай класс новости и источник. Корпоративный шум и слабые сигналы → больше Volatility_price.
+  user: |
+    Источник: {source}
+    Класс: {news_class}
+    Заголовок: {headline}
+
+ticker_hybrid:
+  user: |
+    Источник: {source}
+    Класс: {news_class}
+    Заголовок: {headline}
+
+    FinBERT sentiment (urea): {finbert_urea_json}
+    FinBERT sentiment (dap): {finbert_dap_json}
+    FinBERT sentiment (mop): {finbert_mop_json}
+
+    На основе FinBERT sentiment по каждому продукту верни structured output ticker
+    (urea_ticker, dap_ticker, mop_ticker) с вероятностями Increase_price, Decrease_price, Volatility_price.
+
+parse_helper:
+  system: |
+    Предыдущий ответ модели не прошёл валидацию structured output.
+    Исправь ответ так, чтобы он строго соответствовал ожидаемой JSON-схеме.
+    Не добавляй пояснений — только корректные поля схемы.
+  user: |
+    Агент: {agent_name}
+    Ошибка валидации: {error}
+    Исходный ответ модели:
+    {raw_response}
+
+    Ожидаемая схема:
+    {schema_description}
+
+finbert_ticker_product:
+  user: |
+    Source: {source}
+    Class: {news_class}
+    Headline: {headline}
+    Fertilizer product: {product}
+
+finbert_translator:
+  system: |
+    Translate news field values to English. Return JSON only with exactly the same keys as input.
+
+    Rules:
+    - Translate only field values, not key names.
+    - Preserve meaning and financial terminology.
+    - If a value is already in English, return it unchanged.
+    - For news_class: translate the category name to English (e.g. Фосфаты → Phosphates).
+    - No explanations, no markdown — only a JSON object.
+  user: |
+    {fields_json}
+
+hybrid:
+  log_format: |
+    system:
+    {system}
+
+    user:
+    {user}
+
+  ticker:
+    translate_fields:
+      - source
+      - news_class
+      - headline
+    finbert_prompt: finbert_ticker_product
+    finbert_products:
+      - urea
+      - dap
+      - mop
+    agent:
+      system: ticker_from_news
+      user: ticker_hybrid

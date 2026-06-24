@@ -1,0 +1,11 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.env
+Pipeline/llm/models/weights/
+Experiments_with_pipeline/_tmp_*
+Experiments_with_pipeline/results_*/
+Results/hybrid_rag_comparison/

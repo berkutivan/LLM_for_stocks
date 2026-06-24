@@ -1,0 +1,465 @@
+{
+  "generated_at": "2026-06-24T19:49:23",
+  "output_dir": "c:\\Users\\berku\\Desktop\\Newtostocks\\Results\\hybrid_comparison",
+  "gain": 0.5,
+  "new_predictions_csv": "c:\\Users\\berku\\Desktop\\Newtostocks\\Results\\hybrid_comparison\\market_to_ticker_hybrid_new.csv",
+  "baseline_predictions_csv": "C:\\Users\\berku\\Desktop\\Newtostocks\\Results\\market_to_ticker_hybrid.csv",
+  "category_vs_actual": {
+    "generated_at": "2026-06-24T19:48:53",
+    "predicted_csv": "c:\\Users\\berku\\Desktop\\Newtostocks\\Results\\hybrid_comparison\\market_to_ticker_hybrid_new.csv",
+    "actual_csv": "C:\\Users\\berku\\Desktop\\Newtostocks\\market_news.csv",
+    "total_rows": 370,
+    "evaluated_rows": 370,
+    "matched_rows": 356,
+    "mismatched_rows": 14,
+    "accuracy": 0.9622,
+    "missing_predictions": 0,
+    "missing_actual_labels": 0,
+    "rows_with_missing_labels": 0,
+    "per_class": {
+      "Аммиак": {
+        "tp": 52,
+        "fp": 7,
+        "fn": 0,
+        "support": 52,
+        "precision": 0.8814,
+        "recall": 1.0,
+        "f1": 0.9369
+      },
+      "Калий": {
+        "tp": 48,
+        "fp": 0,
+        "fn": 0,
+        "support": 48,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "Логистика": {
+        "tp": 44,
+        "fp": 6,
+        "fn": 0,
+        "support": 44,
+        "precision": 0.88,
+        "recall": 1.0,
+        "f1": 0.9362
+      },
+      "Макро/валюта": {
+        "tp": 31,
+        "fp": 0,
+        "fn": 0,
+        "support": 31,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "Прочее": {
+        "tp": 56,
+        "fp": 0,
+        "fn": 0,
+        "support": 56,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "Спрос/агрорынок": {
+        "tp": 41,
+        "fp": 1,
+        "fn": 6,
+        "support": 47,
+        "precision": 0.9762,
+        "recall": 0.8723,
+        "f1": 0.9213
+      },
+      "Фосфаты": {
+        "tp": 61,
+        "fp": 0,
+        "fn": 1,
+        "support": 62,
+        "precision": 1.0,
+        "recall": 0.9839,
+        "f1": 0.9919
+      },
+      "Энергоносители": {
+        "tp": 23,
+        "fp": 0,
+        "fn": 7,
+        "support": 30,
+        "precision": 1.0,
+        "recall": 0.7667,
+        "f1": 0.8679
+      }
+    },
+    "confusion_matrix": {
+      "Аммиак": {
+        "Аммиак": 52,
+        "Калий": 0,
+        "Логистика": 0,
+        "Макро/валюта": 0,
+        "Прочее": 0,
+        "Спрос/агрорынок": 0,
+        "Фосфаты": 0,
+        "Энергоносители": 0
+      },
+      "Калий": {
+        "Аммиак": 0,
+        "Калий": 48,
+        "Логистика": 0,
+        "Макро/валюта": 0,
+        "Прочее": 0,
+        "Спрос/агрорынок": 0,
+        "Фосфаты": 0,
+        "Энергоносители": 0
+      },
+      "Логистика": {
+        "Аммиак": 0,
+        "Калий": 0,
+        "Логистика": 44,
+        "Макро/валюта": 0,
+        "Прочее": 0,
+        "Спрос/агрорынок": 0,
+        "Фосфаты": 0,
+        "Энергоносители": 0
+      },
+      "Макро/валюта": {
+        "Аммиак": 0,
+        "Калий": 0,
+        "Логистика": 0,
+        "Макро/валюта": 31,
+        "Прочее": 0,
+        "Спрос/агрорынок": 0,
+        "Фосфаты": 0,
+        "Энергоносители": 0
+      },
+      "Прочее": {
+        "Аммиак": 0,
+        "Калий": 0,
+        "Логистика": 0,
+        "Макро/валюта": 0,
+        "Прочее": 56,
+        "Спрос/агрорынок": 0,
+        "Фосфаты": 0,
+        "Энергоносители": 0
+      },
+      "Спрос/агрорынок": {
+        "Аммиак": 0,
+        "Калий": 0,
+        "Логистика": 6,
+        "Макро/валюта": 0,
+        "Прочее": 0,
+        "Спрос/агрорынок": 41,
+        "Фосфаты": 0,
+        "Энергоносители": 0
+      },
+      "Фосфаты": {
+        "Аммиак": 0,
+        "Калий": 0,
+        "Логистика": 0,
+        "Макро/валюта": 0,
+        "Прочее": 0,
+        "Спрос/агрорынок": 1,
+        "Фосфаты": 61,
+        "Энергоносители": 0
+      },
+      "Энергоносители": {
+        "Аммиак": 7,
+        "Калий": 0,
+        "Логистика": 0,
+        "Макро/валюта": 0,
+        "Прочее": 0,
+        "Спрос/агрорынок": 0,
+        "Фосфаты": 0,
+        "Энергоносители": 23
+      }
+    },
+    "top_mismatches": [
+      {
+        "actual_category": "Энергоносители",
+        "predicted_category": "Аммиак",
+        "count": 7
+      },
+      {
+        "actual_category": "Спрос/агрорынок",
+        "predicted_category": "Логистика",
+        "count": 6
+      },
+      {
+        "actual_category": "Фосфаты",
+        "predicted_category": "Спрос/агрорынок",
+        "count": 1
+      }
+    ]
+  },
+  "category_new_vs_baseline": {
+    "generated_at": "2026-06-24T19:48:54",
+    "new_csv": "c:\\Users\\berku\\Desktop\\Newtostocks\\Results\\hybrid_comparison\\market_to_ticker_hybrid_new.csv",
+    "old_csv": "C:\\Users\\berku\\Desktop\\Newtostocks\\Results\\market_to_ticker_hybrid.csv",
+    "overlap_rows": 335,
+    "category_match_rows": 327,
+    "category_mismatch_rows": 8,
+    "category_agreement": 0.9761,
+    "priority_mean_delta_new_minus_old": 3.4597,
+    "priority_mae": 11.4836,
+    "top_category_mismatches": [
+      {
+        "predicted_category_old": "Аммиак",
+        "predicted_category_new": "Энергоносители",
+        "count": 2
+      },
+      {
+        "predicted_category_old": "Логистика",
+        "predicted_category_new": "Спрос/агрорынок",
+        "count": 2
+      },
+      {
+        "predicted_category_old": "Энергоносители",
+        "predicted_category_new": "Аммиак",
+        "count": 2
+      },
+      {
+        "predicted_category_old": "Спрос/агрорынок",
+        "predicted_category_new": "Логистика",
+        "count": 1
+      },
+      {
+        "predicted_category_old": "Фосфаты",
+        "predicted_category_new": "Спрос/агрорынок",
+        "count": 1
+      }
+    ]
+  },
+  "priority_price_correlation": {
+    "generated_at": "2026-06-24T19:48:56",
+    "new_predictions": {
+      "news_csv": "c:\\Users\\berku\\Desktop\\Newtostocks\\Results\\hybrid_comparison\\market_to_ticker_hybrid_new.csv",
+      "prices_csv": "C:\\Users\\berku\\Desktop\\Newtostocks\\new_prices.csv",
+      "importance_metric": "importance_max",
+      "observations": 339,
+      "date_range": {
+        "from": "2020-01-08",
+        "to": "2026-06-12"
+      },
+      "lag1_abs_return": {
+        "urea": {
+          "pearson_r": 0.0469,
+          "n": 339
+        },
+        "dap": {
+          "pearson_r": -0.0617,
+          "n": 339
+        },
+        "mop": {
+          "pearson_r": -0.0023,
+          "n": 339
+        },
+        "max(urea, dap, mop)": {
+          "pearson_r": 0.027,
+          "n": 339
+        }
+      },
+      "lag1_3_sum_abs_return": {
+        "urea": {
+          "pearson_r": 0.0058,
+          "n": 339
+        },
+        "dap": {
+          "pearson_r": -0.0268,
+          "n": 339
+        },
+        "mop": {
+          "pearson_r": -0.0718,
+          "n": 339
+        },
+        "max(urea, dap, mop)": {
+          "pearson_r": -0.0721,
+          "n": 339
+        }
+      },
+      "spearman_lag1": {
+        "urea": 0.1099,
+        "dap": -0.0801,
+        "mop": -0.039,
+        "max(urea, dap, mop)": 0.0433
+      },
+      "spearman_lag1_3": {
+        "urea": 0.0707,
+        "dap": -0.0079,
+        "mop": -0.0285,
+        "max(urea, dap, mop)": -0.0413
+      }
+    },
+    "baseline_predictions": {
+      "news_csv": "C:\\Users\\berku\\Desktop\\Newtostocks\\Results\\market_to_ticker_hybrid.csv",
+      "prices_csv": "C:\\Users\\berku\\Desktop\\Newtostocks\\new_prices.csv",
+      "importance_metric": "importance_max",
+      "observations": 305,
+      "date_range": {
+        "from": "2020-01-08",
+        "to": "2026-06-12"
+      },
+      "lag1_abs_return": {
+        "urea": {
+          "pearson_r": 0.0636,
+          "n": 305
+        },
+        "dap": {
+          "pearson_r": -0.0171,
+          "n": 305
+        },
+        "mop": {
+          "pearson_r": 0.0294,
+          "n": 305
+        },
+        "max(urea, dap, mop)": {
+          "pearson_r": 0.0722,
+          "n": 305
+        }
+      },
+      "lag1_3_sum_abs_return": {
+        "urea": {
+          "pearson_r": 0.0747,
+          "n": 305
+        },
+        "dap": {
+          "pearson_r": 0.0203,
+          "n": 305
+        },
+        "mop": {
+          "pearson_r": -0.0185,
+          "n": 305
+        },
+        "max(urea, dap, mop)": {
+          "pearson_r": 0.0032,
+          "n": 305
+        }
+      },
+      "spearman_lag1": {
+        "urea": 0.0832,
+        "dap": -0.018,
+        "mop": -0.0151,
+        "max(urea, dap, mop)": 0.0794
+      },
+      "spearman_lag1_3": {
+        "urea": 0.0488,
+        "dap": 0.0338,
+        "mop": -0.0099,
+        "max(urea, dap, mop)": -0.0313
+      }
+    }
+  },
+  "evaluation_new": {
+    "rows_total": 2369,
+    "rows_with_prices": 338,
+    "strategy_accuracy": {
+      "urea": {
+        "matches": 103,
+        "total": 338,
+        "accuracy_pct": 30.47
+      },
+      "dap": {
+        "matches": 114,
+        "total": 338,
+        "accuracy_pct": 33.73
+      },
+      "mop": {
+        "matches": 123,
+        "total": 338,
+        "accuracy_pct": 36.39
+      }
+    },
+    "pnl": {
+      "initial_capital": 100000.0,
+      "rows_with_prices": 338,
+      "by_product_compound_return_pct": {
+        "urea": -53.0553,
+        "dap": 105.8905,
+        "mop": 23.3392
+      },
+      "by_product_predicted_profit": {
+        "urea": -53055.26,
+        "dap": 105890.52,
+        "mop": 23339.17
+      },
+      "total_sum_compound_return_pct": 76.1744,
+      "predicted_profit": 76174.43,
+      "predicted_final_capital": 176174.43,
+      "by_product_benchmark_compound_return_pct": {
+        "urea": 74604120.3302,
+        "dap": 372401.7392,
+        "mop": 6437992.9948
+      },
+      "by_product_benchmark_profit": {
+        "urea": 74604120330.22,
+        "dap": 372401739.2,
+        "mop": 6437992994.75
+      },
+      "benchmark_sum_compound_return_pct": 81414515.0642,
+      "benchmark_profit": 81414515064.17,
+      "benchmark_final_capital": 81414615064.17
+    },
+    "gain": 0.5,
+    "predictions_csv": "c:\\Users\\berku\\Desktop\\Newtostocks\\Results\\hybrid_comparison\\market_to_ticker_hybrid_new.csv"
+  },
+  "evaluation_baseline": {
+    "rows_total": 2369,
+    "rows_with_prices": 338,
+    "strategy_accuracy": {
+      "urea": {
+        "matches": 108,
+        "total": 338,
+        "accuracy_pct": 31.95
+      },
+      "dap": {
+        "matches": 126,
+        "total": 338,
+        "accuracy_pct": 37.28
+      },
+      "mop": {
+        "matches": 116,
+        "total": 338,
+        "accuracy_pct": 34.32
+      }
+    },
+    "pnl": {
+      "initial_capital": 100000.0,
+      "rows_with_prices": 338,
+      "by_product_compound_return_pct": {
+        "urea": -14.1177,
+        "dap": 85.9098,
+        "mop": 13.8601
+      },
+      "by_product_predicted_profit": {
+        "urea": -14117.69,
+        "dap": 85909.82,
+        "mop": 13860.11
+      },
+      "total_sum_compound_return_pct": 85.6522,
+      "predicted_profit": 85652.24,
+      "predicted_final_capital": 185652.24,
+      "by_product_benchmark_compound_return_pct": {
+        "urea": 74604120.3302,
+        "dap": 372401.7392,
+        "mop": 6437992.9948
+      },
+      "by_product_benchmark_profit": {
+        "urea": 74604120330.22,
+        "dap": 372401739.2,
+        "mop": 6437992994.75
+      },
+      "benchmark_sum_compound_return_pct": 81414515.0642,
+      "benchmark_profit": 81414515064.17,
+      "benchmark_final_capital": 81414615064.17
+    },
+    "gain": 0.5,
+    "predictions_csv": "C:\\Users\\berku\\Desktop\\Newtostocks\\Results\\market_to_ticker_hybrid.csv"
+  },
+  "evaluation_delta": {
+    "total_sum_compound_return_pct": -9.4778,
+    "predicted_profit": -9477.81,
+    "by_product_compound_return_pct": {
+      "urea": -38.9376,
+      "dap": 19.9807,
+      "mop": 9.4791
+    }
+  }
+}

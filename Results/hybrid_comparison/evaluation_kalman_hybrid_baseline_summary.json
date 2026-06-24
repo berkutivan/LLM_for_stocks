@@ -1,0 +1,53 @@
+{
+  "rows_total": 2369,
+  "rows_with_prices": 338,
+  "strategy_accuracy": {
+    "urea": {
+      "matches": 108,
+      "total": 338,
+      "accuracy_pct": 31.95
+    },
+    "dap": {
+      "matches": 126,
+      "total": 338,
+      "accuracy_pct": 37.28
+    },
+    "mop": {
+      "matches": 116,
+      "total": 338,
+      "accuracy_pct": 34.32
+    }
+  },
+  "pnl": {
+    "initial_capital": 100000.0,
+    "rows_with_prices": 338,
+    "by_product_compound_return_pct": {
+      "urea": -14.1177,
+      "dap": 85.9098,
+      "mop": 13.8601
+    },
+    "by_product_predicted_profit": {
+      "urea": -14117.69,
+      "dap": 85909.82,
+      "mop": 13860.11
+    },
+    "total_sum_compound_return_pct": 85.6522,
+    "predicted_profit": 85652.24,
+    "predicted_final_capital": 185652.24,
+    "by_product_benchmark_compound_return_pct": {
+      "urea": 74604120.3302,
+      "dap": 372401.7392,
+      "mop": 6437992.9948
+    },
+    "by_product_benchmark_profit": {
+      "urea": 74604120330.22,
+      "dap": 372401739.2,
+      "mop": 6437992994.75
+    },
+    "benchmark_sum_compound_return_pct": 81414515.0642,
+    "benchmark_profit": 81414515064.17,
+    "benchmark_final_capital": 81414615064.17
+  },
+  "gain": 0.5,
+  "predictions_csv": "C:\\Users\\berku\\Desktop\\Newtostocks\\Results\\market_to_ticker_hybrid.csv"
+}

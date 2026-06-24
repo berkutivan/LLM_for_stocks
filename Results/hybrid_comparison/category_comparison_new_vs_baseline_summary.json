@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-06-24T19:48:54",
+  "new_csv": "c:\\Users\\berku\\Desktop\\Newtostocks\\Results\\hybrid_comparison\\market_to_ticker_hybrid_new.csv",
+  "old_csv": "C:\\Users\\berku\\Desktop\\Newtostocks\\Results\\market_to_ticker_hybrid.csv",
+  "overlap_rows": 335,
+  "category_match_rows": 327,
+  "category_mismatch_rows": 8,
+  "category_agreement": 0.9761,
+  "priority_mean_delta_new_minus_old": 3.4597,
+  "priority_mae": 11.4836,
+  "top_category_mismatches": [
+    {
+      "predicted_category_old": "Аммиак",
+      "predicted_category_new": "Энергоносители",
+      "count": 2
+    },
+    {
+      "predicted_category_old": "Логистика",
+      "predicted_category_new": "Спрос/агрорынок",
+      "count": 2
+    },
+    {
+      "predicted_category_old": "Энергоносители",
+      "predicted_category_new": "Аммиак",
+      "count": 2
+    },
+    {
+      "predicted_category_old": "Спрос/агрорынок",
+      "predicted_category_new": "Логистика",
+      "count": 1
+    },
+    {
+      "predicted_category_old": "Фосфаты",
+      "predicted_category_new": "Спрос/агрорынок",
+      "count": 1
+    }
+  ]
+}
