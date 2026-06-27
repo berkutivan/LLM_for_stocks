@@ -1,0 +1,42 @@
+{
+  "1.0%": {
+    "n": 89,
+    "by_variant": {
+      "3": {
+        "n": 89,
+        "products": {
+          "urea": {
+            "direction_accuracy": 0.39325842696629215
+          },
+          "dap": {
+            "direction_accuracy": 0.30337078651685395
+          },
+          "mop": {
+            "direction_accuracy": 0.29213483146067415
+          }
+        },
+        "direction_accuracy_mean": 0.3295880149812734
+      }
+    }
+  },
+  "2.0%": {
+    "n": 89,
+    "by_variant": {
+      "3": {
+        "n": 89,
+        "products": {
+          "urea": {
+            "direction_accuracy": 0.38202247191011235
+          },
+          "dap": {
+            "direction_accuracy": 0.2696629213483146
+          },
+          "mop": {
+            "direction_accuracy": 0.2808988764044944
+          }
+        },
+        "direction_accuracy_mean": 0.3108614232209738
+      }
+    }
+  }
+}

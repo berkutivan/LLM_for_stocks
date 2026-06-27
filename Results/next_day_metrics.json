@@ -1,0 +1,52 @@
+{
+  "test": {
+    "n": 330,
+    "by_variant": {
+      "1": {
+        "n": 110,
+        "products": {
+          "urea": {
+            "direction_accuracy": 0.43636363636363634
+          },
+          "dap": {
+            "direction_accuracy": 0.3181818181818182
+          },
+          "mop": {
+            "direction_accuracy": 0.2818181818181818
+          }
+        },
+        "direction_accuracy_mean": 0.34545454545454546
+      },
+      "2": {
+        "n": 110,
+        "products": {
+          "urea": {
+            "direction_accuracy": 0.41818181818181815
+          },
+          "dap": {
+            "direction_accuracy": 0.33636363636363636
+          },
+          "mop": {
+            "direction_accuracy": 0.2636363636363636
+          }
+        },
+        "direction_accuracy_mean": 0.33939393939393936
+      },
+      "3": {
+        "n": 110,
+        "products": {
+          "urea": {
+            "direction_accuracy": 0.39090909090909093
+          },
+          "dap": {
+            "direction_accuracy": 0.33636363636363636
+          },
+          "mop": {
+            "direction_accuracy": 0.2636363636363636
+          }
+        },
+        "direction_accuracy_mean": 0.3303030303030303
+      }
+    }
+  }
+}
